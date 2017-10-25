@@ -5,5 +5,9 @@ target
 .mvn
 mvnw
 mvnw.cmd
-
+data
+mvnw.cmd
+wind-eureka-provider.iml
+mvnw
+target
 
