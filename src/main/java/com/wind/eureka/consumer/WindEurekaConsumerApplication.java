@@ -14,10 +14,10 @@ import org.springframework.web.client.RestTemplate;
 
 
 
-@Import({ DispatcherServletAutoConfiguration.class, EmbeddedServletContainerAutoConfiguration.class,
-		ErrorMvcAutoConfiguration.class, HttpEncodingAutoConfiguration.class,
-		HttpMessageConvertersAutoConfiguration.class, JacksonAutoConfiguration.class, MultipartAutoConfiguration.class,
-		ServerPropertiesAutoConfiguration.class, WebMvcAutoConfiguration.class })
+//@Import({ DispatcherServletAutoConfiguration.class, EmbeddedServletContainerAutoConfiguration.class,
+//		ErrorMvcAutoConfiguration.class, HttpEncodingAutoConfiguration.class,
+//		HttpMessageConvertersAutoConfiguration.class, JacksonAutoConfiguration.class, MultipartAutoConfiguration.class,
+//		ServerPropertiesAutoConfiguration.class, WebMvcAutoConfiguration.class })
 @EnableCircuitBreaker
 @EnableEurekaClient
 @EnableFeignClients(basePackages = ("com.wind.eureka.consumer.remote"))
