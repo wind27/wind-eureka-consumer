@@ -13,6 +13,6 @@ import org.springframework.web.servlet.mvc.method.annotation.CallableMethodRetur
 //@FeignClient(value= "WIND-EUREKA-PROVIDER")
 @FeignClient(value= "WIND-ZUUL-GATEWAY")
 public interface HelloRemote {
-    @RequestMapping(value = "/provider")
+    @RequestMapping(value = "/user/provider")
     String hello();
 }
