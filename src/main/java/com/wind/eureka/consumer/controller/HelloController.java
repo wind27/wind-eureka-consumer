@@ -19,8 +19,7 @@ public class HelloController {
     @Autowired
     HelloRemote helloRemote;
 
-    @HystrixCommand(fallbackMethod = "helloFallback", commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000") })
+    @HystrixCommand(fallbackMethod = "fallback")
     @RequestMapping("consumer")
     public String hello(HttpServletRequest request) {
         System.out.println(request.getLocalAddr().toString() + ":" + request.getLocalPort());
@@ -28,7 +27,7 @@ public class HelloController {
     }
 
 
-    public String helloFallback(HttpServletRequest request) {
-        return "订单查找失败！";
+    public String fallback(HttpServletRequest request) {
+        return "网管路由异常, 启动熔断处理！";
     }
 }
